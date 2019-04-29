@@ -1,24 +1,36 @@
-# README
+# Commands
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Create a rails api :
+```
+rails new blog --api -T
+```
 
-Things you may want to cover:
+## Install all dependencies :
+```
+bundle install
+```
 
-* Ruby version
+## Create database :
+```
+rails db:create
+```
 
-* System dependencies
+## Generate a migration :
+```
+rails generate migration CreatePosts
+```
 
-* Configuration
+## Generate a migration with association :
+```
+rails g migration AddPostToComments post:belongs_to
+```
 
-* Database creation
+## Run the migrations :
+```
+rails db:migrate
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Generate a scaffold :
+```
+rails g scaffold Comment name:string message:text
+```
